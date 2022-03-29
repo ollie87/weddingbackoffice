@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Guests from './components/guests';
+import GuestState from './adapters/contexts/GuestState';
+import { dependenciesLocator } from './adapters/IoC/IocContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GuestState ioc={dependenciesLocator}>
+      <div className="App">
+        <Guests />
+      </div>
+    </GuestState>
   );
 }
-
 export default App;

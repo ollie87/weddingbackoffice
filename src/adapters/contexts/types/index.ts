@@ -1,0 +1,1 @@
+export const GET_GUESTS = 'GUET_GUESTS'
