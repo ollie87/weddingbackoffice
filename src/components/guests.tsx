@@ -1,13 +1,16 @@
 import React, { useContext, useEffect } from 'react';
 import GuestContext from '../adapters/contexts/GuestContext';
-import MaterialTable from 'material-table'
+import MaterialTable from 'material-table';
+import { TablePagination, TablePaginationProps } from '@material-ui/core';
 
 const Guests = () => {
     const guestsContext = useContext(GuestContext);
     const { guestList, getGuest} = guestsContext;
 
     useEffect(() => {
-        getGuest()
+        if (getGuest) {
+            getGuest()
+        }
     }, [])
     return (
         <div>

@@ -11,7 +11,7 @@ const VEGETARIAN_TYPE_TEXT = 'Vegetariano'
 const CHILDISH_TYPE_TEXT = 'Infantil'
 const BABY_NOT_MENU_TEXT = 'Bebé (Sin menu)'
 
-export const MENU_TYPES_OPTIONS = [
+export const MENU_TYPES_OPTIONS: IType[] = [
     {
         id: CLASIC_TYPE_ID,
         name: CLASIC_TYPE_TEXT
