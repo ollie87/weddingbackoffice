@@ -11,7 +11,7 @@ const Guests = () => {
         if (fn) {
             fn()
         }
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
     return (
         <div>
             {

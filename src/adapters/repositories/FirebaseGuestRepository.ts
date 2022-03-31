@@ -25,7 +25,7 @@ export class FirebaseGuestRepository extends FirebaseRepository implements Guest
     }
 
     async get (filters: any): Promise<Guest[]> {
-        const q = query(collection(this.db, this.collectionName), where('bus', '==', true))
+        const q = query(collection(this.db, this.collectionName))
         const querySnapshot = await getDocs(q)
         const firestoreGuests: GuestFirestore[] = []
         querySnapshot.forEach((doc) => {
