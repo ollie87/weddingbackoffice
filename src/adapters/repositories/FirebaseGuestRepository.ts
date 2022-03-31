@@ -1,7 +1,7 @@
 import { GuestRepository } from "../../domain/repositories/GuestRepository";
 import { FirebaseRepository } from "./FirebaseRepository";
 import { Guest } from "../../domain/entities/Guest.model"
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 import { MENU_TYPES_OPTIONS } from "../../domain/constants/menu-types";
 import { getType, IType } from "../../domain/constants/iType";
 import { AGE_TYPES } from "../../domain/constants/age-types";
